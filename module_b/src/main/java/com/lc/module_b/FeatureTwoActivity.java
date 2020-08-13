@@ -8,7 +8,6 @@ import android.widget.TextView;
 
 import com.lc.base.TestComponentError;
 import com.xiaojinzi.component.anno.RouterAnno;
-import com.xiaojinzi.component.impl.Router;
 
 @RouterAnno(
         host = "ModuleB",
@@ -26,7 +25,8 @@ public class FeatureTwoActivity extends AppCompatActivity {
         tv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                TestComponentError.Test2();
+                TestBean testBean = new TestBean("1","test1");
+                TestComponentError.Test3(testBean.getText());
             }
         });
     }

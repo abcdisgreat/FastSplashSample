@@ -17,7 +17,7 @@ public class TestComponentError {
                 .path("ModuleB_FeatureTwoActivity")
                 .forward();
     }
-    public static void Test2() {
-        ToastUtils.showLong("点击事件");
+    public static void Test3(String text) {
+        ToastUtils.showLong(text);
     }
 }
