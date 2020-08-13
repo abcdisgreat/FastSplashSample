@@ -26,3 +26,8 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+ext {
+    routerApiVersion = "1.8.2.3-androidx"
+    routerCompilerVersion = "1.8.2.3-androidx"
+
+}

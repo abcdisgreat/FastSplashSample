@@ -1,3 +1,4 @@
+include ':base'
 include ':sample1'
 include ':sample2'
 include ':app'
