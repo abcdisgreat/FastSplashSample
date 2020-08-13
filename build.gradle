@@ -29,5 +29,5 @@ task clean(type: Delete) {
 ext {
     routerApiVersion = "1.8.2.3-androidx"
     routerCompilerVersion = "1.8.2.3-androidx"
-
+    utilcodexVersion = "1.29.0"
 }
