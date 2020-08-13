@@ -39,7 +39,6 @@ dependencies {
     // 模块化路由跳转
     api "com.github.xiaojinzi123.Component:component-impl:$rootProject.ext.routerApiVersion"
     annotationProcessor "com.github.xiaojinzi123.Component:component-compiler:$rootProject.ext.routerCompilerVersion"
-
-    implementation project(':module_a')
-    implementation project(':module_b')
+    api project(':module_a')
+    api project(':module_b')
 }

@@ -3,9 +3,12 @@ package com.lc.module_a;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
 
 import com.lc.base.TestComponentError;
 import com.xiaojinzi.component.anno.RouterAnno;
+import com.xiaojinzi.component.impl.Router;
 
 @RouterAnno(
         host = "ModuleA",
@@ -18,6 +21,17 @@ public class FeatureOneActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_feature_one);
-        TestComponentError.Test1();
+
+
+        TextView tv = findViewById(R.id.tv_skip);
+        tv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Router.with(FeatureOneActivity.this)
+                        .host("ModuleB")
+                        .path("ModuleB_FeatureTwoActivity")
+                        .forward();
+            }
+        });
     }
 }
