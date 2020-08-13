@@ -23,14 +23,11 @@ public class FeatureOneActivity extends AppCompatActivity {
         setContentView(R.layout.activity_feature_one);
 
 
-        TextView tv = findViewById(R.id.tv_skip);
+        TextView tv = findViewById(R.id.tv_test);
         tv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Router.with(FeatureOneActivity.this)
-                        .host("ModuleB")
-                        .path("ModuleB_FeatureTwoActivity")
-                        .forward();
+                TestComponentError.Test1();
             }
         });
     }

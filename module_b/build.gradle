@@ -25,6 +25,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
@@ -35,7 +39,7 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     // 模块化路由跳转
-    api "com.github.xiaojinzi123.Component:component-impl:$rootProject.ext.routerApiVersion"
+    implementation "com.github.xiaojinzi123.Component:component-impl:$rootProject.ext.routerApiVersion"
     annotationProcessor "com.github.xiaojinzi123.Component:component-compiler:$rootProject.ext.routerCompilerVersion"
-
+    implementation project(':base')
 }

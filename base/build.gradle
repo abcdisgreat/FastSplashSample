@@ -33,7 +33,37 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+// androidx
+    api "androidx.appcompat:appcompat:$rootProject.ext.xAppcompat"
+    api "androidx.legacy:legacy-support-v4:$rootProject.ext.xLegacy"
+    api "androidx.recyclerview:recyclerview:$rootProject.ext.xRecyclerview"
+    api "androidx.constraintlayout:constraintlayout:$rootProject.ext.xConstraintlayout"
+    api "com.google.android.material:material:$rootProject.ext.xMaterial"
+    api "androidx.cardview:cardview:$rootProject.ext.xCardview"
+    api "androidx.annotation:annotation:$rootProject.ext.xAnnotation"
+    api "androidx.multidex:multidex:$rootProject.ext.xMultidex"
+    api "android.arch.navigation:navigation-fragment:$rootProject.ext.xNavigation"
+    api "android.arch.navigation:navigation-ui:$rootProject.ext.xNavigation"
+    // Architecture Components
+    api "androidx.lifecycle:lifecycle-runtime:$rootProject.ext.xLifecycle"
+    api "androidx.lifecycle:lifecycle-extensions:$rootProject.ext.xLifecycle"
+    //noinspection LifecycleAnnotationProcessorWithJava8
+    annotationProcessor "androidx.lifecycle:lifecycle-compiler:$rootProject.ext.xLifecycle"
+    // Room数据库
+    api "androidx.room:room-runtime:$rootProject.ext.xRoom"
+    annotationProcessor "androidx.room:room-compiler:$rootProject.ext.xRoom"
+    api "androidx.room:room-rxjava2:$rootProject.ext.xRoom"
+    api "androidx.paging:paging-runtime:$rootProject.ext.xPageing"
 
+    // JakeWharton okhttp net framework   Android api 19->3.12.x,  21->4.2.x
+    api "com.squareup.okhttp3:okhttp:$rootProject.ext.okhttp3Version"
+    api "com.squareup.okhttp3:logging-interceptor:$rootProject.ext.okhttp3Version"
+    // JakeWharton okio framework
+    api "com.squareup.okio:okio:$rootProject.ext.okioVersion"
+    // JakeWharton retrofit framework
+    api "com.squareup.retrofit2:retrofit:$rootProject.ext.retrofit2Version"
+    api "com.squareup.retrofit2:adapter-rxjava2:$rootProject.ext.retrofit2Version"
+    api "com.squareup.retrofit2:converter-gson:$rootProject.ext.retrofit2Version"
     // 模块化路由跳转
     api "com.github.xiaojinzi123.Component:component-impl:$rootProject.ext.routerApiVersion"
     annotationProcessor "com.github.xiaojinzi123.Component:component-compiler:$rootProject.ext.routerCompilerVersion"

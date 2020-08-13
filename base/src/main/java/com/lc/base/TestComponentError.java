@@ -2,6 +2,7 @@ package com.lc.base;
 
 import com.blankj.utilcode.util.AppUtils;
 import com.blankj.utilcode.util.ToastUtils;
+import com.xiaojinzi.component.impl.Router;
 
 /**
  * @author：lc
@@ -11,8 +12,12 @@ import com.blankj.utilcode.util.ToastUtils;
 public class TestComponentError {
 
     public static void Test1() {
-        String appName = AppUtils.getAppName();
-        ToastUtils.showLong(appName);
+        Router.with()
+                .host("ModuleB")
+                .path("ModuleB_FeatureTwoActivity")
+                .forward();
     }
-
+    public static void Test2() {
+        ToastUtils.showLong("点击事件");
+    }
 }
